@@ -1,5 +1,14 @@
 # BuddyGiftfy — ITDS242 Project Phase II
 
+## Project report / รายงานสรุปสำหรับสมัครงาน
+
+- [รายงาน PDF ภาษาไทย 3 หน้า](docs/portfolio-report-th.pdf)
+- [อ่านรายงานบน GitHub (Markdown)](docs/PORTFOLIO-REPORT.md)
+
+รายงานนี้สรุปภาพรวมระบบ บทบาทของผู้สมัคร หลักฐานทดสอบที่มีอยู่ และวิธีเปิดดูโครงการ สำหรับผู้พิจารณาฝึกงาน ไม่ใช่รายงานส่งอาจารย์ต้นฉบับหรือผลทดสอบใหม่
+
+This portfolio report describes project scope, confirmed applicant contributions, existing test evidence and reviewer setup steps. It does not replace the original academic submission or claim new test execution.
+
 ## Portfolio overview / สรุปผลงานสำหรับสมัครฝึกงาน
 
 **Rattapong Koosakultham — รัฐพงศ์ คูสกุลธรรม** · Team project, Section 2 / Group 8
@@ -210,7 +219,7 @@ Frontend ใช้ Node.js built-in modules จึงไม่ต้อง `npm 
 
 ## เอกสารและการทดสอบ
 
-- [รายงาน Phase I และ II (PDF)](sec2_gr8_report.pdf) — บันทึกผลจากชุดสาธิตเดิม 20 รายการ ส่วนเครดิตแคตตาล็อกปัจจุบันอยู่ใน [REFERENCES.md](docs/REFERENCES.md)
+- [รายงานสรุปสำหรับ Portfolio (PDF)](docs/portfolio-report-th.pdf) - ฉบับใหม่สำหรับสมัครงาน; รายงาน Phase I/II ต้นฉบับเก็บไว้ภายนอก Repository สาธารณะ
 - [คู่มือติดตั้งฉบับเต็ม](docs/INSTALLATION.md)
 - [แผนผังหน้าเว็บ](docs/HTML-PAGE-MAP.md) และ [บริการ Frankfurter](docs/PUBLIC-API-TH.md)
 - [รายละเอียด API](docs/API.md) และ [ผลทดสอบแยกรายบริการ](docs/SERVICE-COVERAGE.md)
