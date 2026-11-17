@@ -10,7 +10,7 @@
 - `sec2_gr8_fe_src/` — HTML, CSS, JavaScript, รูปและฟอนต์; เซิร์ฟเวอร์หน้าบ้าน
 - `sec2_gr8_ws_src/` — Node.js API, business logic, migrations; เซิร์ฟเวอร์หลังบ้าน
 - `sec2_gr8_database.sql` — schema และข้อมูลตัวอย่างจาก MySQL ไม่มีข้อมูลลูกค้า สลิป หรือบัญชีจริงของร้าน
-- `sec2_gr8_report.pdf` — รายงาน Phase I และ II ที่หน้าแรกของ repository
+- [รายงานสรุปโครงการสำหรับ Portfolio (PDF)](portfolio-report-th.pdf) และ [ฉบับ Markdown](PORTFOLIO-REPORT.md) — สรุปภาพรวม บทบาท และหลักฐานที่มีอยู่ ส่วนรายงาน Phase I/II ต้นฉบับเก็บไว้นอก repository สาธารณะ
 - `docs/postman/` — collection และ environment สำหรับ Postman
 - `docs/API.md` — endpoint, JSON, CSRF/cookie และวิธีทดสอบ
 - `readme.txt` ที่โฟลเดอร์หลัก — สำเนาคู่มือติดตั้งฉบับข้อความ
@@ -144,7 +144,7 @@ npm run db:migrate
 
 ## หลักฐานและการทดสอบ
 
-ผลการทดสอบอยู่ในรายงาน PDF และ `docs/SERVICE-COVERAGE.md`
+ผลการทดสอบที่เอกสารโครงการบันทึกไว้ดูได้ใน [สรุปผลทดสอบแยกรายบริการ](SERVICE-COVERAGE.md) ส่วน [รายงาน Portfolio](portfolio-report-th.pdf) สรุปหลักฐานดังกล่าว ไม่ใช่ผลทดสอบรอบใหม่
 
 Postman: import collection และ environment ใน `docs/postman`, เลือก environment, ตั้ง baseUrl ของ API, ใช้บัญชีสาธิตและ Run Collection cookie/CSRF จะถูกจัดการตามลำดับ collection เพิ่ม/แก้ไข/ลบข้อมูลทดสอบ และเปลี่ยนชื่อ/ย้ายสินค้าในหมวดสาธิตก่อนคืนชื่อหมวด จึงควรรันกับฐานข้อมูลสาธิตแยกจากร้านจริง
 
