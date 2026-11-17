@@ -8,7 +8,7 @@ node_modules/
 
 # Machine-specific runtimes, actual MySQL data, credentials and backups.
 /work/
-/sec2_gr8_ws_src/work/
+/backend/work/
 
 # Shop uploads and customer payment slips are local data, not source assets.
 **/public/images/uploads/

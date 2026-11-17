@@ -7,15 +7,15 @@
 
 ## โครงสร้างปัจจุบัน
 
-- `sec2_gr8_fe_src/` — HTML, CSS, JavaScript, รูปและฟอนต์; เซิร์ฟเวอร์หน้าบ้าน
-- `sec2_gr8_ws_src/` — Node.js API, business logic, migrations; เซิร์ฟเวอร์หลังบ้าน
-- `sec2_gr8_database.sql` — schema และข้อมูลตัวอย่างจาก MySQL ไม่มีข้อมูลลูกค้า สลิป หรือบัญชีจริงของร้าน
-- [รายงานสรุปโครงการสำหรับ Portfolio (PDF)](portfolio-report-th.pdf) และ [ฉบับ Markdown](PORTFOLIO-REPORT.md) — สรุปภาพรวม บทบาท และหลักฐานที่มีอยู่ ส่วนรายงาน Phase I/II ต้นฉบับเก็บไว้นอก repository สาธารณะ
+- `frontend/` — HTML, CSS, JavaScript, รูปและฟอนต์; เซิร์ฟเวอร์หน้าบ้าน
+- `backend/` — Node.js API, business logic, migrations; เซิร์ฟเวอร์หลังบ้าน
+- `database/sec2_gr8_database.sql` — schema และข้อมูลตัวอย่างจาก MySQL ไม่มีข้อมูลลูกค้า สลิป หรือบัญชีจริงของร้าน
+- [รายงานสรุปโครงการสำหรับ Portfolio (PDF)](reports/portfolio-report-th.pdf) และ [ฉบับ Markdown](reports/PORTFOLIO-REPORT.md) — สรุปภาพรวม บทบาท และหลักฐานที่มีอยู่ ส่วนรายงาน Phase I/II ต้นฉบับเก็บไว้นอก repository สาธารณะ
 - `docs/postman/` — collection และ environment สำหรับ Postman
 - `docs/API.md` — endpoint, JSON, CSRF/cookie และวิธีทดสอบ
-- `readme.txt` ที่โฟลเดอร์หลัก — สำเนาคู่มือติดตั้งฉบับข้อความ
+- `docs/guides/legacy-installation.txt` — สำเนาคู่มือติดตั้งฉบับข้อความ
 
-ตัวงานสำหรับติดตั้งใหม่ใช้สองโฟลเดอร์ซอร์ส, SQL ตัวอย่าง และ docs พร้อม README/readme.txt ไม่ต้องยก node_modules หรือ runtime จากเครื่องเดิมไป เครื่องใหม่ต้องติดตั้ง Node.js/MySQL และ dependency เอง ข้อมูลร้านล่าสุดและไฟล์อัปโหลดต้องสำรองแยกต่างหาก
+ตัวงานสำหรับติดตั้งใหม่ใช้สองโฟลเดอร์ซอร์ส, SQL ตัวอย่าง และ docs พร้อม README และ docs/guides/legacy-installation.txt ไม่ต้องยก node_modules หรือ runtime จากเครื่องเดิมไป เครื่องใหม่ต้องติดตั้ง Node.js/MySQL และ dependency เอง ข้อมูลร้านล่าสุดและไฟล์อัปโหลดต้องสำรองแยกต่างหาก
 
 ## ติดตั้งบนเครื่องใหม่ / เครื่องอาจารย์
 
@@ -26,14 +26,14 @@
 ใช้ MySQL ที่ยังไม่มีฐานข้อมูล `buddygiftfy`  โดยเก็บฐานข้อมูลเดิมก่อนหากมีอยู่แล้ว จากโฟลเดอร์โครงการ:
 
 ```sh
-mysql --default-character-set=utf8mb4 -u root -p < sec2_gr8_database.sql
+mysql --default-character-set=utf8mb4 -u root -p < database/sec2_gr8_database.sql
 ```
 
 `-p` ให้พิมพ์รหัส root ของ MySQL บนเครื่องนั้นเมื่อโปรแกรมถาม SQL ระบุ `CREATE DATABASE` และ `USE buddygiftfy` ไว้ จึงนำเข้า `buddygiftfy` เสมอ แม้เลือกฐานข้อมูลอื่นในโปรแกรมไว้ หากต้องการใช้ชื่ออื่น ต้องแก้สองบรรทัดนี้ในสำเนา SQL และตั้ง DB_NAME ให้ตรง ห้ามนำเข้าซ้ำในฐานข้อมูลเดิมเพราะมี INSERT ที่อาจชนรหัสเดิม
 
 ระบุ `--default-character-set=utf8mb4` ทุกครั้งที่นำเข้า เพื่อให้ MySQL อ่านไฟล์ SQL แบบ UTF-8 ได้ถูกต้อง ตัวอักษรอย่าง `à¸` ในชื่อสินค้าและหมวดหมู่เกิดจากการอ่านข้อมูลด้วยชุดอักขระผิดตอนนำเข้า
 
-- **PowerShell หรือ MySQL client แบบโต้ตอบ** เปิดด้วย `mysql --default-character-set=utf8mb4 -u root -p` แล้วใช้ `SOURCE /absolute/path/sec2_gr8_database.sql;` เปลี่ยนเป็นพาธจริงของไฟล์ เช่น `C:/BuddyGiftfy/sec2_gr8_database.sql` บน Windows
+- **PowerShell หรือ MySQL client แบบโต้ตอบ** เปิดด้วย `mysql --default-character-set=utf8mb4 -u root -p` แล้วใช้ `SOURCE /absolute/path/BuddyGiftfy/database/sec2_gr8_database.sql;` เปลี่ยนเป็นพาธจริงของไฟล์ เช่น `C:/BuddyGiftfy/database/sec2_gr8_database.sql` บน Windows
 - **MySQL Workbench** เปิดไฟล์ SQL เป็น UTF-8 แล้วรัน `SET NAMES utf8mb4;` ใน session เดียวกันก่อนรันสคริปต์
 - หลังนำเข้า เช็กชื่อหมวดหมู่ด้วย `SELECT name FROM buddygiftfy.categories;` ควรอ่านได้เป็นภาษาไทย เช่น “ของขวัญสั่งทำ” และ “ตุ๊กตา” หากข้อมูลเดิมเพี้ยนไปแล้ว ให้สำรองข้อมูลก่อน สำหรับฐานข้อมูลสาธิตให้ทดสอบนำเข้าใหม่บน MySQL ที่ยังไม่มีฐานข้อมูลชื่อนี้ การเพิ่มตัวเลือกมีผลกับการนำเข้าครั้งใหม่เท่านั้น
 
@@ -47,7 +47,7 @@ GRANT SELECT, INSERT, UPDATE, DELETE ON buddygiftfy.* TO 'buddygiftfy'@'127.0.0.
 ### 2. ตั้งค่าและติดตั้ง backend
 
 ```sh
-cd sec2_gr8_ws_src
+cd backend
 npm ci
 cp .env.example .env
 ```
@@ -66,7 +66,7 @@ DB_PASSWORD=ChooseYourOwnDatabasePassword
 
 ### 3. เปิด API server — Terminal แรก
 
-อยู่ใน `sec2_gr8_ws_src` แล้วรัน:
+อยู่ใน `backend` แล้วรัน:
 
 ```sh
 node --env-file=.env src/server.js
@@ -76,10 +76,10 @@ node --env-file=.env src/server.js
 
 ### 4. เปิด frontend server — Terminal ที่สอง
 
-เปิด Terminal ใหม่ที่โฟลเดอร์หลัก BuddyGiftfy ก่อน (อย่าเริ่มจาก sec2_gr8_ws_src):
+เปิด Terminal ใหม่ที่โฟลเดอร์หลัก BuddyGiftfy ก่อน (อย่าเริ่มจาก backend):
 
 ```sh
-cd sec2_gr8_fe_src
+cd frontend
 node server.js
 ```
 
@@ -126,17 +126,17 @@ npm run db:seed-catalog
 - ตามค่าเริ่มต้น browser เรียก `/api/...` จากที่อยู่เดียวกับหน้าเว็บ และ frontend ส่งต่อไปที่ `http://127.0.0.1:3001` ถ้า API อยู่คนละเครื่องหรือพอร์ต ให้ตั้ง `API_UPSTREAM` ตอนเปิด frontend ให้เป็นที่อยู่ที่ frontend ติดต่อได้ ปล่อย `API_ORIGIN` ว่างเพื่อใช้ proxy; ตัวเลือกนี้ใช้เฉพาะกรณีตั้งใจให้ browser เรียก API แยกโดยตรง
 - เมื่อใช้ Nginx Proxy Manager ให้ส่งคำขอทั้งโดเมนรวมถึง `/api/` ไปที่ frontend พอร์ต 3000 เพิ่ม origin แบบเต็ม เช่น `https://buddygiftfy.suraknet.space` ใน `FRONTEND_ORIGIN` ของ backend แล้วเปิดทั้งสองเซิร์ฟเวอร์ใหม่ ถ้าให้บริการผ่าน HTTPS เท่านั้น ให้ตั้ง `SESSION_COOKIE_SECURE=true` ที่ backend ด้วย ตรวจด้วยการเปิด `/api/health` ต่อท้ายโดเมนและลองล็อกอิน
 - `DB_SOCKET_PATH` ใช้เฉพาะกรณี Unix socket ปกติปล่อยว่างเพื่อเชื่อม host/port
-- สลิปเก็บโดยปริยายใน `sec2_gr8_ws_src/work/runtime/payment-proofs` (เปลี่ยนได้ด้วย PROOF_DIRECTORY); ภาพสินค้าที่อัปโหลดอยู่ `sec2_gr8_ws_src/public/images/uploads` ทั้งสองอย่างไม่รวมอยู่ใน SQL ตัวอย่าง
+- สลิปเก็บโดยปริยายใน `backend/work/runtime/payment-proofs` (เปลี่ยนได้ด้วย PROOF_DIRECTORY); ภาพสินค้าที่อัปโหลดอยู่ `backend/public/images/uploads` ทั้งสองอย่างไม่รวมอยู่ใน SQL ตัวอย่าง
 - เซสชันใช้ HttpOnly cookie และ CSRF; รหัสผ่านใช้ scrypt ไม่เก็บ plaintext; SQL ใช้ parameter binding
 - ระบบปัจจุบันรัน backend หนึ่ง process ก่อนใช้หลาย instance ต้องมี shared session locking และ shared upload storage
 - การเปิดผ่านอินเทอร์เน็ตต้องมี hosting/HTTPS และตั้ง cookie ตาม deployment; ชุดนี้ทดสอบ local frontend/backend ไม่ได้เผยแพร่ขึ้นอินเทอร์เน็ต
 
 ## พัฒนาและ migrations
 
-ไฟล์ตั้งต้นแยกไว้ใน `sec2_gr8_ws_src/migrations/` ถ้านำเข้า SQL แล้ว migrations ถูกบันทึกว่าทำแล้ว ไม่ต้อง migrate หรือ seed เพื่อเปิดร้านตามปกติ แม้รัน migrations ซ้ำ ตัว runner ยังต้องมี CREATE เพื่อจัดการตารางบันทึก migration การอัปเดต schema ต้องใช้บัญชีสิทธิ์ที่เพียงพอตาม SQL เช่น CREATE/ALTER/INDEX/REFERENCES และสิทธิ์อ่านเขียน เริ่มจากโฟลเดอร์หลักแล้วเข้า backend ก่อน:
+ไฟล์ตั้งต้นแยกไว้ใน `backend/migrations/` ถ้านำเข้า SQL แล้ว migrations ถูกบันทึกว่าทำแล้ว ไม่ต้อง migrate หรือ seed เพื่อเปิดร้านตามปกติ แม้รัน migrations ซ้ำ ตัว runner ยังต้องมี CREATE เพื่อจัดการตารางบันทึก migration การอัปเดต schema ต้องใช้บัญชีสิทธิ์ที่เพียงพอตาม SQL เช่น CREATE/ALTER/INDEX/REFERENCES และสิทธิ์อ่านเขียน เริ่มจากโฟลเดอร์หลักแล้วเข้า backend ก่อน:
 
 ```sh
-cd sec2_gr8_ws_src
+cd backend
 npm run db:migrate
 ```
 
@@ -144,7 +144,7 @@ npm run db:migrate
 
 ## หลักฐานและการทดสอบ
 
-ผลการทดสอบที่เอกสารโครงการบันทึกไว้ดูได้ใน [สรุปผลทดสอบแยกรายบริการ](SERVICE-COVERAGE.md) ส่วน [รายงาน Portfolio](portfolio-report-th.pdf) สรุปหลักฐานดังกล่าว ไม่ใช่ผลทดสอบรอบใหม่
+ผลการทดสอบที่เอกสารโครงการบันทึกไว้ดูได้ใน [สรุปผลทดสอบแยกรายบริการ](SERVICE-COVERAGE.md) ส่วน [รายงาน Portfolio](reports/portfolio-report-th.pdf) สรุปหลักฐานดังกล่าว ไม่ใช่ผลทดสอบรอบใหม่
 
 Postman: import collection และ environment ใน `docs/postman`, เลือก environment, ตั้ง baseUrl ของ API, ใช้บัญชีสาธิตและ Run Collection cookie/CSRF จะถูกจัดการตามลำดับ collection เพิ่ม/แก้ไข/ลบข้อมูลทดสอบ และเปลี่ยนชื่อ/ย้ายสินค้าในหมวดสาธิตก่อนคืนชื่อหมวด จึงควรรันกับฐานข้อมูลสาธิตแยกจากร้านจริง
 
@@ -152,7 +152,7 @@ Postman: import collection และ environment ใน `docs/postman`, เล�
 
 SQL ที่ให้เป็นข้อมูลสาธิต ไม่ใช่ข้อมูลล่าสุดของเครื่องนี้ หากต้องย้ายร้านจริง ให้หยุดการเขียนข้อมูลชั่วคราว สำรองฐานข้อมูลด้วยเครื่องมือ MySQL ของเครื่องนั้น และเก็บสองโฟลเดอร์ไฟล์อัปโหลดที่ระบุข้างต้น รวมถึงค่าตั้งส่วนตัวแยกไว้ ไม่ใส่ข้อมูลจริงลงชุดส่งงาน
 
-มีคำสั่ง `npm run db:backup` เมื่ออยู่ใน backend ซึ่งใช้ `.env` ของ backend และบันทึก SQL โดยปริยายที่ `sec2_gr8_ws_src/work/runtime/backups` เมื่อรันจากโฟลเดอร์นั้น (เปลี่ยนปลายทางได้ด้วย BACKUP_DIR) ไม่รวม sessions และไม่รวมไฟล์ภาพ/สลิป จึงไม่ใช่สำรองทั้งระบบ
+มีคำสั่ง `npm run db:backup` เมื่ออยู่ใน backend ซึ่งใช้ `.env` ของ backend และบันทึก SQL โดยปริยายที่ `backend/work/runtime/backups` เมื่อรันจากโฟลเดอร์นั้น (เปลี่ยนปลายทางได้ด้วย BACKUP_DIR) ไม่รวม sessions และไม่รวมไฟล์ภาพ/สลิป จึงไม่ใช่สำรองทั้งระบบ
 
 ## ตัวอย่างและหลักฐานบริการครบชุด
 

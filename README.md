@@ -15,10 +15,10 @@
 ## เปิดดูผลงาน
 
 - [งานออกแบบ UI/UX บน Figma](https://www.figma.com/design/TBaXzJesEORYLRinmTN4BP/BuddyGiftfy?node-id=0-1)
-- [โค้ด Frontend](sec2_gr8_fe_src/public)
-- [โค้ด Backend API](sec2_gr8_ws_src/src)
-- [รายงานสรุปโครงการสำหรับ Portfolio (PDF)](docs/portfolio-report-th.pdf)
-- [รายงานสรุปฉบับ Markdown](docs/PORTFOLIO-REPORT.md)
+- [โค้ด Frontend](frontend/public)
+- [โค้ด Backend API](backend/src)
+- [รายงานสรุปโครงการสำหรับ Portfolio (PDF)](docs/reports/portfolio-report-th.pdf)
+- [รายงานสรุปฉบับ Markdown](docs/reports/PORTFOLIO-REPORT.md)
 
 ## ความสามารถหลัก
 
@@ -39,7 +39,7 @@
 
 ระบบต้องติดตั้งและรันในเครื่อง โดยใช้ Node.js 22 ขึ้นไป และ MySQL Server 8 ปัจจุบันยังไม่มีลิงก์เดโมออนไลน์ถาวร
 
-1. นำเข้าฐานข้อมูลตัวอย่างจาก `sec2_gr8_database.sql`
+1. นำเข้าฐานข้อมูลตัวอย่างจาก `database/sec2_gr8_database.sql`
 2. ติดตั้ง dependencies และตั้งค่า `.env` ของ Backend
 3. เปิด Backend ที่พอร์ต 3001 และ Frontend ที่พอร์ต 3000
 4. เปิด `http://localhost:3000`
@@ -67,3 +67,7 @@
 ## การใช้ AI
 
 โครงการใช้ OpenAI Codex ช่วยวางโครงสร้าง เขียนและแก้โค้ด ทดสอบ และเตรียมเอกสาร รายละเอียดเพิ่มเติมอยู่ใน [แหล่งอ้างอิงและการใช้ AI](docs/REFERENCES.md)
+
+## โครงสร้างไฟล์
+
+ดู [แผนผังไฟล์และหน้าที่ของแต่ละโฟลเดอร์](docs/STRUCTURE.md) เพื่อค้นหาโค้ด เอกสาร และหลักฐานของโครงการ

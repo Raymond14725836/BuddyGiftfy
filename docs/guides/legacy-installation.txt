@@ -1,0 +1,16 @@
+คู่มือติดตั้ง BuddyGiftfy ฉบับข้อความ
+
+เอกสารนี้ย้ายมาจาก readme.txt ที่โฟลเดอร์หลัก
+คู่มือฉบับปัจจุบันและรายละเอียดการตั้งค่าอยู่ที่ docs/INSTALLATION.md
+แผนผังไฟล์ทั้งหมดอยู่ที่ docs/STRUCTURE.md
+
+เริ่มคำสั่งจากโฟลเดอร์หลักของโครงการ:
+1. นำเข้า database/sec2_gr8_database.sql ด้วย MySQL 8
+2. เข้า backend แล้วรัน npm ci
+3. คัดลอก backend/.env.example เป็น backend/.env และตั้งค่าฐานข้อมูล
+4. จาก backend รัน node --env-file=.env src/server.js
+5. เปิด Terminal อีกหน้าต่าง เข้า frontend แล้วรัน node server.js
+6. เปิด http://localhost:3000
+
+รายงาน Portfolio อยู่ใน docs/reports/portfolio-report-th.pdf
+ใช้ข้อมูลสาธิตในการทดลอง โดยดูบัญชีและขั้นตอนครบใน docs/INSTALLATION.md

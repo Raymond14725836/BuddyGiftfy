@@ -66,7 +66,7 @@ Postman collection หลักใน docs/postman มี 66 requests / 93 asser
 
 `GET /api/health` · สิทธิ์: Public
 
-โค้ด: `sec2_gr8_ws_src/src/server.js` (ค้น SERVICE-EXAMPLES-BEGIN health)
+โค้ด: `backend/src/server.js` (ค้น SERVICE-EXAMPLES-BEGIN health)
 
 ตัวอย่าง 1: `GET {{baseUrl}}/api/health`
 
@@ -77,7 +77,7 @@ Postman collection หลักใน docs/postman มี 66 requests / 93 asser
 
 `GET /api/session` · สิทธิ์: Public
 
-โค้ด: `sec2_gr8_ws_src/src/service-contract.js` (ค้น SERVICE-EXAMPLES-BEGIN session)
+โค้ด: `backend/src/service-contract.js` (ค้น SERVICE-EXAMPLES-BEGIN session)
 
 ตัวอย่าง 1: `GET {{baseUrl}}/api/session`
 
@@ -88,7 +88,7 @@ Postman collection หลักใน docs/postman มี 66 requests / 93 asser
 
 `GET /api/page` · สิทธิ์: ตามหน้า
 
-โค้ด: `sec2_gr8_ws_src/src/service-contract.js` (ค้น SERVICE-EXAMPLES-BEGIN page)
+โค้ด: `backend/src/service-contract.js` (ค้น SERVICE-EXAMPLES-BEGIN page)
 
 ตัวอย่าง 1: `GET {{baseUrl}}/api/page?path=%2Fshop`
 
@@ -99,7 +99,7 @@ Postman collection หลักใน docs/postman มี 66 requests / 93 asser
 
 `POST /api/auth/admin/login` · สิทธิ์: Public
 
-โค้ด: `sec2_gr8_ws_src/src/server.js` (ค้น SERVICE-EXAMPLES-BEGIN admin-login)
+โค้ด: `backend/src/server.js` (ค้น SERVICE-EXAMPLES-BEGIN admin-login)
 
 ตัวอย่าง 1: `POST {{baseUrl}}/api/auth/admin/login`
 
@@ -126,7 +126,7 @@ Postman collection หลักใน docs/postman มี 66 requests / 93 asser
 
 `POST /api/auth/login` · สิทธิ์: Public
 
-โค้ด: `sec2_gr8_ws_src/src/server.js` (ค้น SERVICE-EXAMPLES-BEGIN customer-login)
+โค้ด: `backend/src/server.js` (ค้น SERVICE-EXAMPLES-BEGIN customer-login)
 
 ตัวอย่าง 1: `POST {{baseUrl}}/api/auth/login`
 
@@ -153,7 +153,7 @@ Postman collection หลักใน docs/postman มี 66 requests / 93 asser
 
 `POST /api/auth/register` · สิทธิ์: Public
 
-โค้ด: `sec2_gr8_ws_src/src/server.js` (ค้น SERVICE-EXAMPLES-BEGIN register)
+โค้ด: `backend/src/server.js` (ค้น SERVICE-EXAMPLES-BEGIN register)
 
 ตัวอย่าง 1: `POST {{baseUrl}}/api/auth/register`
 
@@ -186,7 +186,7 @@ Postman collection หลักใน docs/postman มี 66 requests / 93 asser
 
 `POST /api/logout` · สิทธิ์: Session
 
-โค้ด: `sec2_gr8_ws_src/src/server.js` (ค้น SERVICE-EXAMPLES-BEGIN logout)
+โค้ด: `backend/src/server.js` (ค้น SERVICE-EXAMPLES-BEGIN logout)
 
 ตัวอย่าง 1: `POST {{baseUrl}}/api/logout`
 
@@ -209,7 +209,7 @@ Postman collection หลักใน docs/postman มี 66 requests / 93 asser
 
 `POST /api/admin/logout` · สิทธิ์: Session
 
-โค้ด: `sec2_gr8_ws_src/src/server.js` (ค้น SERVICE-EXAMPLES-BEGIN admin-logout)
+โค้ด: `backend/src/server.js` (ค้น SERVICE-EXAMPLES-BEGIN admin-logout)
 
 ตัวอย่าง 1: `POST {{baseUrl}}/api/admin/logout`
 
@@ -232,7 +232,7 @@ Postman collection หลักใน docs/postman มี 66 requests / 93 asser
 
 `GET /api/admin/products` · สิทธิ์: Owner/Manager/Editor
 
-โค้ด: `sec2_gr8_ws_src/src/admin-routes.js` (ค้น SERVICE-EXAMPLES-BEGIN product-list)
+โค้ด: `backend/src/admin-routes.js` (ค้น SERVICE-EXAMPLES-BEGIN product-list)
 
 ตัวอย่าง 1: `GET {{baseUrl}}/api/admin/products`
 
@@ -243,7 +243,7 @@ Postman collection หลักใน docs/postman มี 66 requests / 93 asser
 
 `GET /api/admin/products/:id` · สิทธิ์: Owner/Manager/Editor
 
-โค้ด: `sec2_gr8_ws_src/src/admin-routes.js` (ค้น SERVICE-EXAMPLES-BEGIN product-detail)
+โค้ด: `backend/src/admin-routes.js` (ค้น SERVICE-EXAMPLES-BEGIN product-detail)
 
 ตัวอย่าง 1: `GET {{baseUrl}}/api/admin/products/{{productId}}`
 
@@ -254,7 +254,7 @@ Postman collection หลักใน docs/postman มี 66 requests / 93 asser
 
 `POST /api/admin/products` · สิทธิ์: Owner/Manager/Editor
 
-โค้ด: `sec2_gr8_ws_src/src/admin-routes.js` (ค้น SERVICE-EXAMPLES-BEGIN product-insert)
+โค้ด: `backend/src/admin-routes.js` (ค้น SERVICE-EXAMPLES-BEGIN product-insert)
 
 ตัวอย่าง 1: `POST {{baseUrl}}/api/admin/products`
 
@@ -291,7 +291,7 @@ Postman collection หลักใน docs/postman มี 66 requests / 93 asser
 
 `PUT /api/admin/products/:id` · สิทธิ์: Owner/Manager/Editor
 
-โค้ด: `sec2_gr8_ws_src/src/admin-routes.js` (ค้น SERVICE-EXAMPLES-BEGIN product-update)
+โค้ด: `backend/src/admin-routes.js` (ค้น SERVICE-EXAMPLES-BEGIN product-update)
 
 ตัวอย่าง 1: `PUT {{baseUrl}}/api/admin/products/{{id}}`
 
@@ -328,7 +328,7 @@ Postman collection หลักใน docs/postman มี 66 requests / 93 asser
 
 `DELETE /api/admin/products/:id` · สิทธิ์: Owner/Manager/Editor
 
-โค้ด: `sec2_gr8_ws_src/src/admin-routes.js` (ค้น SERVICE-EXAMPLES-BEGIN product-delete)
+โค้ด: `backend/src/admin-routes.js` (ค้น SERVICE-EXAMPLES-BEGIN product-delete)
 
 ตัวอย่าง 1: `DELETE {{baseUrl}}/api/admin/products/{{id}}`
 
@@ -353,7 +353,7 @@ Postman collection หลักใน docs/postman มี 66 requests / 93 asser
 
 `GET /api/admin/accounts` · สิทธิ์: Owner
 
-โค้ด: `sec2_gr8_ws_src/src/admin-routes.js` (ค้น SERVICE-EXAMPLES-BEGIN admin-list)
+โค้ด: `backend/src/admin-routes.js` (ค้น SERVICE-EXAMPLES-BEGIN admin-list)
 
 ตัวอย่าง 1: `GET {{baseUrl}}/api/admin/accounts`
 
@@ -364,7 +364,7 @@ Postman collection หลักใน docs/postman มี 66 requests / 93 asser
 
 `GET /api/admin/accounts/:id` · สิทธิ์: Owner
 
-โค้ด: `sec2_gr8_ws_src/src/admin-routes.js` (ค้น SERVICE-EXAMPLES-BEGIN admin-detail)
+โค้ด: `backend/src/admin-routes.js` (ค้น SERVICE-EXAMPLES-BEGIN admin-detail)
 
 ตัวอย่าง 1: `GET {{baseUrl}}/api/admin/accounts/{{adminId}}`
 
@@ -375,7 +375,7 @@ Postman collection หลักใน docs/postman มี 66 requests / 93 asser
 
 `POST /api/admin/accounts` · สิทธิ์: Owner
 
-โค้ด: `sec2_gr8_ws_src/src/admin-routes.js` (ค้น SERVICE-EXAMPLES-BEGIN admin-insert)
+โค้ด: `backend/src/admin-routes.js` (ค้น SERVICE-EXAMPLES-BEGIN admin-insert)
 
 ตัวอย่าง 1: `POST {{baseUrl}}/api/admin/accounts`
 
@@ -416,7 +416,7 @@ Postman collection หลักใน docs/postman มี 66 requests / 93 asser
 
 `PUT /api/admin/accounts/:id` · สิทธิ์: Owner
 
-โค้ด: `sec2_gr8_ws_src/src/admin-routes.js` (ค้น SERVICE-EXAMPLES-BEGIN admin-update)
+โค้ด: `backend/src/admin-routes.js` (ค้น SERVICE-EXAMPLES-BEGIN admin-update)
 
 ตัวอย่าง 1: `PUT {{baseUrl}}/api/admin/accounts/{{id}}`
 
@@ -455,7 +455,7 @@ Postman collection หลักใน docs/postman มี 66 requests / 93 asser
 
 `DELETE /api/admin/accounts/:id` · สิทธิ์: Owner
 
-โค้ด: `sec2_gr8_ws_src/src/admin-routes.js` (ค้น SERVICE-EXAMPLES-BEGIN admin-delete)
+โค้ด: `backend/src/admin-routes.js` (ค้น SERVICE-EXAMPLES-BEGIN admin-delete)
 
 ตัวอย่าง 1: `DELETE {{baseUrl}}/api/admin/accounts/{{id}}`
 
@@ -480,7 +480,7 @@ Postman collection หลักใน docs/postman มี 66 requests / 93 asser
 
 `POST /api/admin/products/:id/hide` · สิทธิ์: Owner/Manager/Editor
 
-โค้ด: `sec2_gr8_ws_src/src/admin-routes.js` (ค้น SERVICE-EXAMPLES-BEGIN product-hide)
+โค้ด: `backend/src/admin-routes.js` (ค้น SERVICE-EXAMPLES-BEGIN product-hide)
 
 ตัวอย่าง 1: `POST {{baseUrl}}/api/admin/products/{{id}}/hide`
 
@@ -503,7 +503,7 @@ Postman collection หลักใน docs/postman มี 66 requests / 93 asser
 
 `POST /api/admin/product-image` · สิทธิ์: Owner/Manager/Editor
 
-โค้ด: `sec2_gr8_ws_src/src/admin-routes.js` (ค้น SERVICE-EXAMPLES-BEGIN product-image)
+โค้ด: `backend/src/admin-routes.js` (ค้น SERVICE-EXAMPLES-BEGIN product-image)
 
 ตัวอย่าง 1: `POST {{baseUrl}}/api/admin/product-image`
 
@@ -528,7 +528,7 @@ Postman collection หลักใน docs/postman มี 66 requests / 93 asser
 
 `GET /api/admin/categories` · สิทธิ์: Owner/Manager
 
-โค้ด: `sec2_gr8_ws_src/src/category-routes.js` (ค้น SERVICE-EXAMPLES-BEGIN category-list)
+โค้ด: `backend/src/category-routes.js` (ค้น SERVICE-EXAMPLES-BEGIN category-list)
 
 ตัวอย่าง 1: `GET {{baseUrl}}/api/admin/categories`
 
@@ -539,7 +539,7 @@ Postman collection หลักใน docs/postman มี 66 requests / 93 asser
 
 `POST /api/admin/categories/new` · สิทธิ์: Owner/Manager
 
-โค้ด: `sec2_gr8_ws_src/src/category-routes.js` (ค้น SERVICE-EXAMPLES-BEGIN category-insert)
+โค้ด: `backend/src/category-routes.js` (ค้น SERVICE-EXAMPLES-BEGIN category-insert)
 
 ตัวอย่าง 1: `POST {{baseUrl}}/api/admin/categories/new`
 
@@ -568,7 +568,7 @@ Postman collection หลักใน docs/postman มี 66 requests / 93 asser
 
 `POST /api/admin/categories/:id/edit` · สิทธิ์: Owner/Manager
 
-โค้ด: `sec2_gr8_ws_src/src/category-routes.js` (ค้น SERVICE-EXAMPLES-BEGIN category-update)
+โค้ด: `backend/src/category-routes.js` (ค้น SERVICE-EXAMPLES-BEGIN category-update)
 
 ตัวอย่าง 1: `POST {{baseUrl}}/api/admin/categories/{{id}}/edit`
 
@@ -597,7 +597,7 @@ Postman collection หลักใน docs/postman มี 66 requests / 93 asser
 
 `POST /api/admin/categories/:id/delete` · สิทธิ์: Owner/Manager
 
-โค้ด: `sec2_gr8_ws_src/src/category-routes.js` (ค้น SERVICE-EXAMPLES-BEGIN category-delete)
+โค้ด: `backend/src/category-routes.js` (ค้น SERVICE-EXAMPLES-BEGIN category-delete)
 
 ตัวอย่าง 1: `POST {{baseUrl}}/api/admin/categories/{{id}}/delete`
 
@@ -621,7 +621,7 @@ Postman collection หลักใน docs/postman มี 66 requests / 93 asser
 
 `POST /api/cart/add` · สิทธิ์: Session
 
-โค้ด: `sec2_gr8_ws_src/src/shop-routes.js` (ค้น SERVICE-EXAMPLES-BEGIN cart-add)
+โค้ด: `backend/src/shop-routes.js` (ค้น SERVICE-EXAMPLES-BEGIN cart-add)
 
 ตัวอย่าง 1: `POST {{baseUrl}}/api/cart/add`
 
@@ -650,7 +650,7 @@ Postman collection หลักใน docs/postman มี 66 requests / 93 asser
 
 `POST /api/cart/update` · สิทธิ์: Session
 
-โค้ด: `sec2_gr8_ws_src/src/shop-routes.js` (ค้น SERVICE-EXAMPLES-BEGIN cart-update)
+โค้ด: `backend/src/shop-routes.js` (ค้น SERVICE-EXAMPLES-BEGIN cart-update)
 
 ตัวอย่าง 1: `POST {{baseUrl}}/api/cart/update`
 
@@ -677,7 +677,7 @@ Postman collection หลักใน docs/postman มี 66 requests / 93 asser
 
 `POST /api/cart/remove` · สิทธิ์: Session
 
-โค้ด: `sec2_gr8_ws_src/src/shop-routes.js` (ค้น SERVICE-EXAMPLES-BEGIN cart-remove)
+โค้ด: `backend/src/shop-routes.js` (ค้น SERVICE-EXAMPLES-BEGIN cart-remove)
 
 ตัวอย่าง 1: `POST {{baseUrl}}/api/cart/remove`
 
@@ -702,7 +702,7 @@ Postman collection หลักใน docs/postman มี 66 requests / 93 asser
 
 `POST /api/favorites/toggle` · สิทธิ์: Session
 
-โค้ด: `sec2_gr8_ws_src/src/shop-routes.js` (ค้น SERVICE-EXAMPLES-BEGIN favorite)
+โค้ด: `backend/src/shop-routes.js` (ค้น SERVICE-EXAMPLES-BEGIN favorite)
 
 ตัวอย่าง 1: `POST {{baseUrl}}/api/favorites/toggle`
 
@@ -727,7 +727,7 @@ Postman collection หลักใน docs/postman มี 66 requests / 93 asser
 
 `POST /api/checkout` · สิทธิ์: Customer
 
-โค้ด: `sec2_gr8_ws_src/src/shop-routes.js` (ค้น SERVICE-EXAMPLES-BEGIN checkout)
+โค้ด: `backend/src/shop-routes.js` (ค้น SERVICE-EXAMPLES-BEGIN checkout)
 
 ตัวอย่าง 1: `POST {{baseUrl}}/api/checkout`
 
@@ -760,7 +760,7 @@ Postman collection หลักใน docs/postman มี 66 requests / 93 asser
 
 `POST /api/account/profile` · สิทธิ์: Customer
 
-โค้ด: `sec2_gr8_ws_src/src/shop-routes.js` (ค้น SERVICE-EXAMPLES-BEGIN customer-profile)
+โค้ด: `backend/src/shop-routes.js` (ค้น SERVICE-EXAMPLES-BEGIN customer-profile)
 
 ตัวอย่าง 1: `POST {{baseUrl}}/api/account/profile`
 
@@ -791,7 +791,7 @@ Postman collection หลักใน docs/postman มี 66 requests / 93 asser
 
 `POST /api/account/password` · สิทธิ์: Customer
 
-โค้ด: `sec2_gr8_ws_src/src/shop-routes.js` (ค้น SERVICE-EXAMPLES-BEGIN customer-password)
+โค้ด: `backend/src/shop-routes.js` (ค้น SERVICE-EXAMPLES-BEGIN customer-password)
 
 ตัวอย่าง 1: `POST {{baseUrl}}/api/account/password`
 
@@ -820,7 +820,7 @@ Postman collection หลักใน docs/postman มี 66 requests / 93 asser
 
 `POST /api/admin/profile` · สิทธิ์: Admin
 
-โค้ด: `sec2_gr8_ws_src/src/shop-routes.js` (ค้น SERVICE-EXAMPLES-BEGIN admin-self-profile)
+โค้ด: `backend/src/shop-routes.js` (ค้น SERVICE-EXAMPLES-BEGIN admin-self-profile)
 
 ตัวอย่าง 1: `POST {{baseUrl}}/api/admin/profile`
 
@@ -851,7 +851,7 @@ Postman collection หลักใน docs/postman มี 66 requests / 93 asser
 
 `POST /api/admin/profile/password` · สิทธิ์: Admin
 
-โค้ด: `sec2_gr8_ws_src/src/shop-routes.js` (ค้น SERVICE-EXAMPLES-BEGIN admin-self-password)
+โค้ด: `backend/src/shop-routes.js` (ค้น SERVICE-EXAMPLES-BEGIN admin-self-password)
 
 ตัวอย่าง 1: `POST {{baseUrl}}/api/admin/profile/password`
 
@@ -880,7 +880,7 @@ Postman collection หลักใน docs/postman มี 66 requests / 93 asser
 
 `POST /api/order/:number/proof` · สิทธิ์: Customer
 
-โค้ด: `sec2_gr8_ws_src/src/shop-routes.js` (ค้น SERVICE-EXAMPLES-BEGIN order-proof)
+โค้ด: `backend/src/shop-routes.js` (ค้น SERVICE-EXAMPLES-BEGIN order-proof)
 
 ตัวอย่าง 1: `POST {{baseUrl}}/api/order/{{orderNumber}}/proof`
 
@@ -905,7 +905,7 @@ Postman collection หลักใน docs/postman มี 66 requests / 93 asser
 
 `POST /api/order/:number/cancel` · สิทธิ์: Customer
 
-โค้ด: `sec2_gr8_ws_src/src/shop-routes.js` (ค้น SERVICE-EXAMPLES-BEGIN order-cancel)
+โค้ด: `backend/src/shop-routes.js` (ค้น SERVICE-EXAMPLES-BEGIN order-cancel)
 
 ตัวอย่าง 1: `POST {{baseUrl}}/api/order/{{orderNumber}}/cancel`
 
@@ -928,7 +928,7 @@ Postman collection หลักใน docs/postman มี 66 requests / 93 asser
 
 `GET /api/payment-proof/:id` · สิทธิ์: เจ้าของออเดอร์/Owner/Manager
 
-โค้ด: `sec2_gr8_ws_src/src/shop-routes.js` (ค้น SERVICE-EXAMPLES-BEGIN payment-proof)
+โค้ด: `backend/src/shop-routes.js` (ค้น SERVICE-EXAMPLES-BEGIN payment-proof)
 
 ตัวอย่าง 1: `GET {{baseUrl}}/api/payment-proof/{{paymentId}}`
 
@@ -939,7 +939,7 @@ Postman collection หลักใน docs/postman มี 66 requests / 93 asser
 
 `POST /api/admin/settings` · สิทธิ์: Owner
 
-โค้ด: `sec2_gr8_ws_src/src/shop-routes.js` (ค้น SERVICE-EXAMPLES-BEGIN settings)
+โค้ด: `backend/src/shop-routes.js` (ค้น SERVICE-EXAMPLES-BEGIN settings)
 
 ตัวอย่าง 1: `POST {{baseUrl}}/api/admin/settings`
 
@@ -974,7 +974,7 @@ Postman collection หลักใน docs/postman มี 66 requests / 93 asser
 
 `POST /api/admin/orders/:id/review` · สิทธิ์: Owner/Manager
 
-โค้ด: `sec2_gr8_ws_src/src/shop-routes.js` (ค้น SERVICE-EXAMPLES-BEGIN order-review)
+โค้ด: `backend/src/shop-routes.js` (ค้น SERVICE-EXAMPLES-BEGIN order-review)
 
 ตัวอย่าง 1: `POST {{baseUrl}}/api/admin/orders/{{id}}/review`
 
@@ -1001,7 +1001,7 @@ Postman collection หลักใน docs/postman มี 66 requests / 93 asser
 
 `POST /api/admin/orders/:id/status` · สิทธิ์: Owner/Manager
 
-โค้ด: `sec2_gr8_ws_src/src/shop-routes.js` (ค้น SERVICE-EXAMPLES-BEGIN order-status)
+โค้ด: `backend/src/shop-routes.js` (ค้น SERVICE-EXAMPLES-BEGIN order-status)
 
 ตัวอย่าง 1: `POST {{baseUrl}}/api/admin/orders/{{id}}/status`
 
@@ -1028,7 +1028,7 @@ Postman collection หลักใน docs/postman มี 66 requests / 93 asser
 
 `POST /api/admin/orders/:id/cancel` · สิทธิ์: Owner/Manager
 
-โค้ด: `sec2_gr8_ws_src/src/shop-routes.js` (ค้น SERVICE-EXAMPLES-BEGIN admin-order-cancel)
+โค้ด: `backend/src/shop-routes.js` (ค้น SERVICE-EXAMPLES-BEGIN admin-order-cancel)
 
 ตัวอย่าง 1: `POST {{baseUrl}}/api/admin/orders/{{id}}/cancel`
 
@@ -1051,7 +1051,7 @@ Postman collection หลักใน docs/postman มี 66 requests / 93 asser
 
 `POST /api/admin/messages/:id/status` · สิทธิ์: Owner/Manager
 
-โค้ด: `sec2_gr8_ws_src/src/shop-routes.js` (ค้น SERVICE-EXAMPLES-BEGIN message-status)
+โค้ด: `backend/src/shop-routes.js` (ค้น SERVICE-EXAMPLES-BEGIN message-status)
 
 ตัวอย่าง 1: `POST {{baseUrl}}/api/admin/messages/{{id}}/status`
 
@@ -1076,7 +1076,7 @@ Postman collection หลักใน docs/postman มี 66 requests / 93 asser
 
 `POST /api/contact` · สิทธิ์: Public
 
-โค้ด: `sec2_gr8_ws_src/src/server.js` (ค้น SERVICE-EXAMPLES-BEGIN contact)
+โค้ด: `backend/src/server.js` (ค้น SERVICE-EXAMPLES-BEGIN contact)
 
 ตัวอย่าง 1: `POST {{baseUrl}}/api/contact`
 
@@ -1107,7 +1107,7 @@ Postman collection หลักใน docs/postman มี 66 requests / 93 asser
 
 `POST /api/admin/payments/:id/status` · สิทธิ์: Owner/Manager
 
-โค้ด: `sec2_gr8_ws_src/src/shop-routes.js` (ค้น SERVICE-EXAMPLES-BEGIN legacy-payment-status)
+โค้ด: `backend/src/shop-routes.js` (ค้น SERVICE-EXAMPLES-BEGIN legacy-payment-status)
 
 ตัวอย่าง 1: `POST {{baseUrl}}/api/admin/payments/{{id}}/status`
 
@@ -1132,7 +1132,7 @@ Postman collection หลักใน docs/postman มี 66 requests / 93 asser
 
 `GET /api/images/uploads/:filename` · สิทธิ์: Public
 
-โค้ด: `sec2_gr8_ws_src/src/server.js` (ค้น SERVICE-EXAMPLES-BEGIN uploaded-image)
+โค้ด: `backend/src/server.js` (ค้น SERVICE-EXAMPLES-BEGIN uploaded-image)
 
 ตัวอย่าง 1: `GET {{baseUrl}}/api/images/uploads/{{imageFilename}}`
 
@@ -1143,7 +1143,7 @@ Postman collection หลักใน docs/postman มี 66 requests / 93 asser
 
 `GET https://api.frankfurter.dev/v2/rate/thb/:quote` · สิทธิ์: Public
 
-โค้ด: `sec2_gr8_fe_src/public/js/shared/public-service.js` (ค้น SERVICE-EXAMPLES-BEGIN public-rate)
+โค้ด: `frontend/public/js/shared/public-service.js` (ค้น SERVICE-EXAMPLES-BEGIN public-rate)
 
 ตัวอย่าง 1: `GET https://api.frankfurter.dev/v2/rate/thb/usd`
 
@@ -1154,7 +1154,7 @@ Postman collection หลักใน docs/postman มี 66 requests / 93 asser
 
 `GET /api/store/home` · สิทธิ์: public
 
-โค้ด: `sec2_gr8_ws_src/src/service-contract.js` (ค้น SERVICE-EXAMPLES-BEGIN view-home)
+โค้ด: `backend/src/service-contract.js` (ค้น SERVICE-EXAMPLES-BEGIN view-home)
 
 ตัวอย่าง 1: `GET {{baseUrl}}/api/store/home`
 
@@ -1165,7 +1165,7 @@ Postman collection หลักใน docs/postman มี 66 requests / 93 asser
 
 `GET /api/store/products` · สิทธิ์: public
 
-โค้ด: `sec2_gr8_ws_src/src/service-contract.js` (ค้น SERVICE-EXAMPLES-BEGIN view-shop)
+โค้ด: `backend/src/service-contract.js` (ค้น SERVICE-EXAMPLES-BEGIN view-shop)
 
 ตัวอย่าง 1: `GET {{baseUrl}}/api/store/products`
 
@@ -1176,7 +1176,7 @@ Postman collection หลักใน docs/postman มี 66 requests / 93 asser
 
 `GET /api/store/products/:slug` · สิทธิ์: public
 
-โค้ด: `sec2_gr8_ws_src/src/service-contract.js` (ค้น SERVICE-EXAMPLES-BEGIN view-product)
+โค้ด: `backend/src/service-contract.js` (ค้น SERVICE-EXAMPLES-BEGIN view-product)
 
 ตัวอย่าง 1: `GET {{baseUrl}}/api/store/products/buddy-bear`
 
@@ -1187,7 +1187,7 @@ Postman collection หลักใน docs/postman มี 66 requests / 93 asser
 
 `GET /api/customer/favorites` · สิทธิ์: public
 
-โค้ด: `sec2_gr8_ws_src/src/service-contract.js` (ค้น SERVICE-EXAMPLES-BEGIN view-favorites)
+โค้ด: `backend/src/service-contract.js` (ค้น SERVICE-EXAMPLES-BEGIN view-favorites)
 
 ตัวอย่าง 1: `GET {{baseUrl}}/api/customer/favorites`
 
@@ -1198,7 +1198,7 @@ Postman collection หลักใน docs/postman มี 66 requests / 93 asser
 
 `GET /api/customer/cart` · สิทธิ์: public
 
-โค้ด: `sec2_gr8_ws_src/src/service-contract.js` (ค้น SERVICE-EXAMPLES-BEGIN view-cart)
+โค้ด: `backend/src/service-contract.js` (ค้น SERVICE-EXAMPLES-BEGIN view-cart)
 
 ตัวอย่าง 1: `GET {{baseUrl}}/api/customer/cart`
 
@@ -1209,7 +1209,7 @@ Postman collection หลักใน docs/postman มี 66 requests / 93 asser
 
 `GET /api/customer/checkout` · สิทธิ์: customer
 
-โค้ด: `sec2_gr8_ws_src/src/service-contract.js` (ค้น SERVICE-EXAMPLES-BEGIN view-checkout)
+โค้ด: `backend/src/service-contract.js` (ค้น SERVICE-EXAMPLES-BEGIN view-checkout)
 
 ตัวอย่าง 1: `GET {{baseUrl}}/api/customer/checkout`
 
@@ -1220,7 +1220,7 @@ Postman collection หลักใน docs/postman มี 66 requests / 93 asser
 
 `GET /api/customer/account` · สิทธิ์: customer
 
-โค้ด: `sec2_gr8_ws_src/src/service-contract.js` (ค้น SERVICE-EXAMPLES-BEGIN view-account)
+โค้ด: `backend/src/service-contract.js` (ค้น SERVICE-EXAMPLES-BEGIN view-account)
 
 ตัวอย่าง 1: `GET {{baseUrl}}/api/customer/account`
 
@@ -1231,7 +1231,7 @@ Postman collection หลักใน docs/postman มี 66 requests / 93 asser
 
 `GET /api/customer/profile` · สิทธิ์: customer
 
-โค้ด: `sec2_gr8_ws_src/src/service-contract.js` (ค้น SERVICE-EXAMPLES-BEGIN view-profile)
+โค้ด: `backend/src/service-contract.js` (ค้น SERVICE-EXAMPLES-BEGIN view-profile)
 
 ตัวอย่าง 1: `GET {{baseUrl}}/api/customer/profile`
 
@@ -1242,7 +1242,7 @@ Postman collection หลักใน docs/postman มี 66 requests / 93 asser
 
 `GET /api/customer/orders/:number` · สิทธิ์: customer
 
-โค้ด: `sec2_gr8_ws_src/src/service-contract.js` (ค้น SERVICE-EXAMPLES-BEGIN view-order)
+โค้ด: `backend/src/service-contract.js` (ค้น SERVICE-EXAMPLES-BEGIN view-order)
 
 ตัวอย่าง 1: `GET {{baseUrl}}/api/customer/orders/{{orderNumber}}`
 
@@ -1253,7 +1253,7 @@ Postman collection หลักใน docs/postman มี 66 requests / 93 asser
 
 `GET /api/admin/overview` · สิทธิ์: operations
 
-โค้ด: `sec2_gr8_ws_src/src/service-contract.js` (ค้น SERVICE-EXAMPLES-BEGIN view-dashboard)
+โค้ด: `backend/src/service-contract.js` (ค้น SERVICE-EXAMPLES-BEGIN view-dashboard)
 
 ตัวอย่าง 1: `GET {{baseUrl}}/api/admin/overview`
 
@@ -1264,7 +1264,7 @@ Postman collection หลักใน docs/postman มี 66 requests / 93 asser
 
 `GET /api/admin/product-options` · สิทธิ์: admin
 
-โค้ด: `sec2_gr8_ws_src/src/service-contract.js` (ค้น SERVICE-EXAMPLES-BEGIN view-product-new)
+โค้ด: `backend/src/service-contract.js` (ค้น SERVICE-EXAMPLES-BEGIN view-product-new)
 
 ตัวอย่าง 1: `GET {{baseUrl}}/api/admin/product-options`
 
@@ -1275,7 +1275,7 @@ Postman collection หลักใน docs/postman มี 66 requests / 93 asser
 
 `GET /api/admin/products/:id/deletion` · สิทธิ์: admin
 
-โค้ด: `sec2_gr8_ws_src/src/service-contract.js` (ค้น SERVICE-EXAMPLES-BEGIN view-product-delete)
+โค้ด: `backend/src/service-contract.js` (ค้น SERVICE-EXAMPLES-BEGIN view-product-delete)
 
 ตัวอย่าง 1: `GET {{baseUrl}}/api/admin/products/1/deletion`
 
@@ -1286,7 +1286,7 @@ Postman collection หลักใน docs/postman มี 66 requests / 93 asser
 
 `GET /api/admin/account-options` · สิทธิ์: owner
 
-โค้ด: `sec2_gr8_ws_src/src/service-contract.js` (ค้น SERVICE-EXAMPLES-BEGIN view-account-new)
+โค้ด: `backend/src/service-contract.js` (ค้น SERVICE-EXAMPLES-BEGIN view-account-new)
 
 ตัวอย่าง 1: `GET {{baseUrl}}/api/admin/account-options`
 
@@ -1297,7 +1297,7 @@ Postman collection หลักใน docs/postman มี 66 requests / 93 asser
 
 `GET /api/admin/accounts/:id/deletion` · สิทธิ์: owner
 
-โค้ด: `sec2_gr8_ws_src/src/service-contract.js` (ค้น SERVICE-EXAMPLES-BEGIN view-account-delete)
+โค้ด: `backend/src/service-contract.js` (ค้น SERVICE-EXAMPLES-BEGIN view-account-delete)
 
 ตัวอย่าง 1: `GET {{baseUrl}}/api/admin/accounts/1/deletion`
 
@@ -1308,7 +1308,7 @@ Postman collection หลักใน docs/postman มี 66 requests / 93 asser
 
 `GET /api/admin/category-options` · สิทธิ์: operations
 
-โค้ด: `sec2_gr8_ws_src/src/service-contract.js` (ค้น SERVICE-EXAMPLES-BEGIN view-category-new)
+โค้ด: `backend/src/service-contract.js` (ค้น SERVICE-EXAMPLES-BEGIN view-category-new)
 
 ตัวอย่าง 1: `GET {{baseUrl}}/api/admin/category-options`
 
@@ -1319,7 +1319,7 @@ Postman collection หลักใน docs/postman มี 66 requests / 93 asser
 
 `GET /api/admin/categories/:id` · สิทธิ์: operations
 
-โค้ด: `sec2_gr8_ws_src/src/service-contract.js` (ค้น SERVICE-EXAMPLES-BEGIN view-category-edit)
+โค้ด: `backend/src/service-contract.js` (ค้น SERVICE-EXAMPLES-BEGIN view-category-edit)
 
 ตัวอย่าง 1: `GET {{baseUrl}}/api/admin/categories/1`
 
@@ -1330,7 +1330,7 @@ Postman collection หลักใน docs/postman มี 66 requests / 93 asser
 
 `GET /api/admin/categories/:id/deletion` · สิทธิ์: operations
 
-โค้ด: `sec2_gr8_ws_src/src/service-contract.js` (ค้น SERVICE-EXAMPLES-BEGIN view-category-delete)
+โค้ด: `backend/src/service-contract.js` (ค้น SERVICE-EXAMPLES-BEGIN view-category-delete)
 
 ตัวอย่าง 1: `GET {{baseUrl}}/api/admin/categories/1/deletion`
 
@@ -1341,7 +1341,7 @@ Postman collection หลักใน docs/postman มี 66 requests / 93 asser
 
 `GET /api/admin/orders` · สิทธิ์: operations
 
-โค้ด: `sec2_gr8_ws_src/src/service-contract.js` (ค้น SERVICE-EXAMPLES-BEGIN view-admin-orders)
+โค้ด: `backend/src/service-contract.js` (ค้น SERVICE-EXAMPLES-BEGIN view-admin-orders)
 
 ตัวอย่าง 1: `GET {{baseUrl}}/api/admin/orders`
 
@@ -1352,7 +1352,7 @@ Postman collection หลักใน docs/postman มี 66 requests / 93 asser
 
 `GET /api/admin/orders/:id` · สิทธิ์: operations
 
-โค้ด: `sec2_gr8_ws_src/src/service-contract.js` (ค้น SERVICE-EXAMPLES-BEGIN view-admin-order)
+โค้ด: `backend/src/service-contract.js` (ค้น SERVICE-EXAMPLES-BEGIN view-admin-order)
 
 ตัวอย่าง 1: `GET {{baseUrl}}/api/admin/orders/1`
 
@@ -1363,7 +1363,7 @@ Postman collection หลักใน docs/postman มี 66 requests / 93 asser
 
 `GET /api/admin/payments` · สิทธิ์: operations
 
-โค้ด: `sec2_gr8_ws_src/src/service-contract.js` (ค้น SERVICE-EXAMPLES-BEGIN view-payments)
+โค้ด: `backend/src/service-contract.js` (ค้น SERVICE-EXAMPLES-BEGIN view-payments)
 
 ตัวอย่าง 1: `GET {{baseUrl}}/api/admin/payments`
 
@@ -1374,7 +1374,7 @@ Postman collection หลักใน docs/postman มี 66 requests / 93 asser
 
 `GET /api/admin/customers` · สิทธิ์: operations
 
-โค้ด: `sec2_gr8_ws_src/src/service-contract.js` (ค้น SERVICE-EXAMPLES-BEGIN view-customers)
+โค้ด: `backend/src/service-contract.js` (ค้น SERVICE-EXAMPLES-BEGIN view-customers)
 
 ตัวอย่าง 1: `GET {{baseUrl}}/api/admin/customers`
 
@@ -1385,7 +1385,7 @@ Postman collection หลักใน docs/postman มี 66 requests / 93 asser
 
 `GET /api/admin/messages` · สิทธิ์: operations
 
-โค้ด: `sec2_gr8_ws_src/src/service-contract.js` (ค้น SERVICE-EXAMPLES-BEGIN view-messages)
+โค้ด: `backend/src/service-contract.js` (ค้น SERVICE-EXAMPLES-BEGIN view-messages)
 
 ตัวอย่าง 1: `GET {{baseUrl}}/api/admin/messages`
 
@@ -1396,7 +1396,7 @@ Postman collection หลักใน docs/postman มี 66 requests / 93 asser
 
 `GET /api/admin/settings` · สิทธิ์: owner
 
-โค้ด: `sec2_gr8_ws_src/src/service-contract.js` (ค้น SERVICE-EXAMPLES-BEGIN view-settings)
+โค้ด: `backend/src/service-contract.js` (ค้น SERVICE-EXAMPLES-BEGIN view-settings)
 
 ตัวอย่าง 1: `GET {{baseUrl}}/api/admin/settings`
 
@@ -1407,7 +1407,7 @@ Postman collection หลักใน docs/postman มี 66 requests / 93 asser
 
 `GET /api/admin/profile` · สิทธิ์: admin
 
-โค้ด: `sec2_gr8_ws_src/src/service-contract.js` (ค้น SERVICE-EXAMPLES-BEGIN view-admin-profile)
+โค้ด: `backend/src/service-contract.js` (ค้น SERVICE-EXAMPLES-BEGIN view-admin-profile)
 
 ตัวอย่าง 1: `GET {{baseUrl}}/api/admin/profile`
 

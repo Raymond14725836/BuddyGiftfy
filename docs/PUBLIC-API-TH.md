@@ -7,7 +7,7 @@
 ## การทำงานตามโค้ดปัจจุบัน
 
 1. ลูกค้าใส่งบ THB ตั้งแต่ 1 ถึง 1,000,000 และเลือก USD, EUR, JPY หรือ GBP
-2. Browser เรียก HTTPS ด้วย fetch จาก `sec2_gr8_fe_src/public/js/shared/public-service.js` โดยตรง ไม่ผ่าน MySQL ของร้าน
+2. Browser เรียก HTTPS ด้วย fetch จาก `frontend/public/js/shared/public-service.js` โดยตรง ไม่ผ่าน MySQL ของร้าน
 3. ตัวอย่าง URL คือ `https://api.frankfurter.dev/v2/rate/thb/usd` เปลี่ยนส่วนท้ายเป็น eur/jpy/gbp ตามที่เลือก
 4. โค้ดตรวจ base เป็น THB, quote ตรงสกุลที่เลือก, rate เป็นตัวเลขมากกว่าศูนย์ และ date มีรูปแบบ YYYY-MM-DD ก่อนแสดงผล
 5. ค่าที่แสดงเท่ากับงบเงินบาทคูณ rate พร้อมวันที่ข้อมูล โค้ดเก็บอัตราที่สำเร็จแยกตามสกุลไว้ในหน้านั้น และใช้ซ้ำระหว่างที่ยังไม่โหลดหน้าใหม่
@@ -19,12 +19,12 @@
 
 ## ไฟล์และหลักฐาน
 
-- `sec2_gr8_fe_src/public/gift-budget.html` — ฟอร์มและส่วนแสดงผล
-- `sec2_gr8_fe_src/public/js/shared/public-service.js` — fetch, ตรวจข้อมูล, cache และข้อผิดพลาด
-- `sec2_gr8_fe_src/public/js/common.js` — โหลด script ของหน้า
+- `frontend/public/gift-budget.html` — ฟอร์มและส่วนแสดงผล
+- `frontend/public/js/shared/public-service.js` — fetch, ตรวจข้อมูล, cache และข้อผิดพลาด
+- `frontend/public/js/common.js` — โหลด script ของหน้า
 - [API.md](API.md) — ตัวอย่างเรียกบริการ public-rate
 - [SERVICE-COVERAGE.md](SERVICE-COVERAGE.md) — ผลทดสอบบริการจริง
 
 สำหรับนำเสนอ อธิบายได้ว่า “เราใช้ Frankfurter เป็น Public API ในหน้าเทียบงบ ช่วยให้ลูกค้าประเมินราคาของขวัญเป็นสกุลที่คุ้นเคย และกดค้นสินค้าภายในงบเงินบาทได้ พร้อมแสดงวันที่อ้างอิง”
 
-ผลทดสอบการเรียกบริการและการลองใหม่เมื่อขัดข้องอยู่ใน [รายงาน PDF](../sec2_gr8_report.pdf)
+ผลทดสอบการเรียกบริการและการลองใหม่เมื่อขัดข้องอยู่ใน [รายงาน PDF](../docs/reports/portfolio-report-th.pdf)
