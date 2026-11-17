@@ -1,6 +1,6 @@
 # BuddyGiftfy
 
-เว็บไซต์ร้านของขวัญสำหรับโครงการวิชา ITDS242 พัฒนาเป็นทีม 5 คน (Section 2, Group 8) รองรับการค้นหาสินค้า ตะกร้า การสั่งซื้อ และการจัดการร้าน
+เว็บไซต์ร้านของขวัญสำหรับโครงการวิชา ITDS242 พัฒนาเป็นทีม 5 คน (กลุ่มเรียน 2 กลุ่มโครงงาน 8) รองรับการค้นหาสินค้า ตะกร้า การสั่งซื้อ และการจัดการร้าน
 
 ## ส่วนที่ผมรับผิดชอบ
 
@@ -15,9 +15,9 @@
 ## เปิดดูผลงาน
 
 - [งานออกแบบ UI/UX บน Figma](https://www.figma.com/design/TBaXzJesEORYLRinmTN4BP/BuddyGiftfy?node-id=0-1)
-- [โค้ด Frontend](frontend/public)
-- [โค้ด Backend API](backend/src)
-- [รายงานสรุปโครงการสำหรับ Portfolio (PDF)](docs/reports/portfolio-report-th.pdf)
+- [โค้ดส่วนหน้าบ้าน](frontend/public)
+- [โค้ดบริการหลังบ้าน](backend/src)
+- [รายงานสรุปโครงการสำหรับแฟ้มผลงาน (PDF)](docs/reports/portfolio-report-th.pdf)
 - [รายงานสรุปฉบับ Markdown](docs/reports/PORTFOLIO-REPORT.md)
 
 ## ความสามารถหลัก
@@ -30,9 +30,9 @@
 
 ## เทคโนโลยี
 
-- **Frontend:** HTML, CSS, JavaScript
-- **Backend:** Node.js
-- **Database:** MySQL
+- **ส่วนหน้าบ้าน:** HTML, CSS, JavaScript
+- **ส่วนหลังบ้าน:** Node.js
+- **ฐานข้อมูล:** MySQL
 - **เครื่องมือออกแบบ:** Figma
 
 ## การทดลองใช้งาน
@@ -40,8 +40,8 @@
 ระบบต้องติดตั้งและรันในเครื่อง โดยใช้ Node.js 22 ขึ้นไป และ MySQL Server 8 ปัจจุบันยังไม่มีลิงก์เดโมออนไลน์ถาวร
 
 1. นำเข้าฐานข้อมูลตัวอย่างจาก `database/sec2_gr8_database.sql`
-2. ติดตั้ง dependencies และตั้งค่า `.env` ของ Backend
-3. เปิด Backend ที่พอร์ต 3001 และ Frontend ที่พอร์ต 3000
+2. ติดตั้งแพ็กเกจที่จำเป็นและตั้งค่า `.env` ของส่วนหลังบ้าน
+3. เปิดส่วนหลังบ้านที่พอร์ต 3001 และส่วนหน้าบ้านที่พอร์ต 3000
 4. เปิด `http://localhost:3000`
 
 อ่านคำสั่งติดตั้งและบัญชีสาธิตใน [คู่มือติดตั้ง](docs/INSTALLATION.md)
@@ -53,7 +53,7 @@
 - [รายละเอียด API](docs/API.md)
 - [แผนผังหน้าเว็บ](docs/HTML-PAGE-MAP.md)
 - [สรุปผลทดสอบที่บันทึกไว้](docs/SERVICE-COVERAGE.md)
-- [Postman collection](docs/postman/sec2_gr8.postman_collection.json) และ [environment](docs/postman/local.postman_environment.json)
+- [ชุดคำขอทดสอบสำหรับ Postman](docs/postman/sec2_gr8.postman_collection.json) และ [ค่าตั้งต้นสำหรับการทดสอบ](docs/postman/local.postman_environment.json)
 - [แหล่งอ้างอิง](docs/REFERENCES.md)
 
 ## สมาชิกทีม
