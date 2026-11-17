@@ -1,24 +1,64 @@
-# BuddyGiftfy — Node.js API และ MySQL
+# BuddyGiftfy - ส่วนหลังบ้านและฐานข้อมูล
 
-ใช้ Node.js 22 ขึ้นไป และ MySQL 8 อ่าน [README หลัก](../README.md) หรือ [ขั้นตอนติดตั้ง](../docs/INSTALLATION.md) ก่อน เริ่มจากนำเข้า `database/sec2_gr8_database.sql` ใน MySQL สำหรับสาธิตโดยระบุ `--default-character-set=utf8mb4` ตอนเรียก MySQL client แล้วใช้คำสั่งในโฟลเดอร์นี้:
+ส่วนนี้ให้บริการ API ด้วย Node.js และเชื่อมต่อฐานข้อมูล MySQL สำหรับข้อมูลสินค้า ผู้ใช้ คำสั่งซื้อ และการจัดการร้าน
+
+## สิ่งที่ต้องเตรียม
+
+- Node.js 22 ขึ้นไป
+- MySQL Server 8
+- ฐานข้อมูลสาธิตจาก `database/sec2_gr8_database.sql` ซึ่งอ้างอิงจากโฟลเดอร์หลักของโครงการ
+
+อ่าน [ภาพรวมโครงการ](../README.md) และ [คู่มือติดตั้งฉบับเต็ม](../docs/INSTALLATION.md) ก่อนนำเข้าฐานข้อมูล โดยใช้ตัวเลือก `--default-character-set=utf8mb4` เพื่อให้ข้อมูลภาษาไทยถูกต้อง
+
+## ติดตั้งและเปิดใช้งาน
+
+เปิดหน้าต่างคำสั่งในโฟลเดอร์ `backend` แล้วติดตั้งแพ็กเกจ:
 
 ```sh
 npm ci
-cp .env.example .env
 ```
 
-Windows Command Prompt ใช้ `copy .env.example .env`; PowerShell ใช้ `Copy-Item .env.example .env` จากนั้นเปิด .env ตั้ง DB_HOST/DB_PORT/DB_NAME/DB_USER/DB_PASSWORD ให้ตรงกับเครื่อง และ FRONTEND_ORIGIN ให้ตรงหน้าบ้าน แล้วเปิด API:
+คัดลอก `.env.example` เป็น `.env` โดยเลือกคำสั่งให้ตรงกับระบบที่ใช้:
+
+| ระบบ | คำสั่ง |
+| --- | --- |
+| Linux หรือ macOS | `cp .env.example .env` |
+| Windows Command Prompt | `copy .env.example .env` |
+| Windows PowerShell | `Copy-Item .env.example .env` |
+
+ตั้งค่า `DB_HOST`, `DB_PORT`, `DB_NAME`, `DB_USER` และ `DB_PASSWORD` ให้ตรงกับฐานข้อมูลของเครื่อง ส่วน `FRONTEND_ORIGIN` ต้องตรงกับที่อยู่หน้าบ้าน จากนั้นเปิดบริการ:
 
 ```sh
 node --env-file=.env src/server.js
 ```
 
-ค่าเริ่มต้น API คือ 3001 ตรวจ [API health](http://localhost:3001/api/health) แล้วเปิด frontend อีก Terminal ตามคู่มือ
+ค่าเริ่มต้นคือพอร์ต 3001 ตรวจการตอบกลับที่ [สถานะบริการ API](http://localhost:3001/api/health) แล้วเปิด [ส่วนหน้าบ้าน](../frontend/README.md) ในหน้าต่างคำสั่งอีกหน้าต่างตามคู่มือ
 
-`src/service-contract.js` จับ URL/method ไปยัง route ที่ทำงานจริงใน server.js, shop-routes.js, admin-routes.js และ category-routes.js `view-data.js` จัด JSON ชื่อช่องให้ controller ไม่มี HTML ใน API
+## ไฟล์สำคัญ
 
-ตัวอย่าง method/URL/JSON อย่างน้อยสองชุดอยู่เหนือโค้ดบริการตาม `docs/service-example-locations.json` ไม่ได้รวมอยู่ใน service-contract.js ไฟล์เดียว ดู [API](../docs/API.md), [ผลทดสอบ](../docs/SERVICE-COVERAGE.md) และ [แผนผังหน้า](../docs/HTML-PAGE-MAP.md)
+| ตำแหน่ง | หน้าที่ |
+| --- | --- |
+| `src/server.js` | จุดเริ่มต้นเซิร์ฟเวอร์และบริการหลัก |
+| `src/shop-routes.js` | บริการสำหรับลูกค้าและหน้าร้าน |
+| `src/admin-routes.js` | บริการสำหรับผู้ดูแลระบบ |
+| `src/category-routes.js` | บริการจัดการหมวดหมู่ |
+| `src/service-contract.js` | จับคู่ที่อยู่และวิธีส่งคำขอกับบริการที่ทำงานจริง |
+| `src/view-data.js` | จัดรูปแบบข้อมูล JSON สำหรับหน้าเว็บ |
+| `migrations/` | คำสั่ง SQL สำหรับปรับโครงสร้างฐานข้อมูล |
+| `scripts/` | เครื่องมือติดตั้งข้อมูลตัวอย่าง ปรับฐานข้อมูล และสำรองข้อมูล |
+| `.env.example` | ตัวอย่างค่าตั้งต้นสำหรับเครื่องใหม่ |
 
-หลังนำเข้า SQL สาธิตไม่ต้อง seed ซ้ำ คำสั่ง db:migrate ใช้เปลี่ยน schema และต้องใช้บัญชี MySQL ที่มี CREATE/ALTER/INDEX/REFERENCES ตาม migrations แยกจากบัญชี DML สำหรับเปิดร้านตามคู่มือ
+ดู [แผนผังไฟล์ทั้งหมด](../docs/STRUCTURE.md) เพื่อค้นหาไฟล์เพิ่มเติม
 
-ไฟล์ .env จริง ข้อมูล MySQL, node_modules, ภาพร้านที่อัปโหลดและสลิปจริงเป็นข้อมูลเฉพาะเครื่อง ส่วน .env.example, migrations, ซอร์ส และเอกสารเก็บใน repository ได้
+## ฐานข้อมูลและข้อมูลส่วนตัว
+
+หลังนำเข้า SQL สาธิตแล้ว ไม่ต้องเติมข้อมูลเริ่มต้นซ้ำ คำสั่ง `npm run db:migrate` ใช้ปรับโครงสร้างฐานข้อมูลและต้องใช้บัญชี MySQL ที่มีสิทธิ์ตามคำสั่งในโฟลเดอร์ `migrations` เช่น `CREATE`, `ALTER`, `INDEX` และ `REFERENCES`
+
+ไฟล์ `.env` จริง ข้อมูล MySQL แพ็กเกจใน `node_modules` รูปที่อัปโหลด และสลิปจริงเป็นข้อมูลเฉพาะเครื่อง ส่วน `.env.example` คำสั่งปรับฐานข้อมูล โค้ด และเอกสารสามารถเก็บในโครงการบน GitHub ได้
+
+## เอกสารเพิ่มเติม
+
+- [รายละเอียด API](../docs/API.md)
+- [สรุปผลทดสอบที่บันทึกไว้](../docs/SERVICE-COVERAGE.md)
+- [แผนผังหน้าเว็บ](../docs/HTML-PAGE-MAP.md)
+- [ตำแหน่งตัวอย่างคำขอและข้อมูลตอบกลับในโค้ด](../docs/service-example-locations.json)
